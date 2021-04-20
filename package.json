@@ -1,7 +1,7 @@
 {
   "name": "mongo-trip-data",
   "version": "1.0.0",
-  "description": "A node, express, and handlebars application using retrieving trip data from a Mongo NoSQL database",
+  "description": "A node, express, and handlebars application reading and writing trip data from a Mongo NoSQL database",
   "main": "index.js",
   "type": "module",
     "dependencies": {
