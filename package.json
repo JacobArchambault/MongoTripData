@@ -1,0 +1,16 @@
+{
+  "name": "mongo-trip-data",
+  "version": "1.0.0",
+  "description": "A node, express, and handlebars application using retrieving trip data from a Mongo NoSQL database",
+  "main": "index.js",
+  "type": "module",
+    "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jacob Archambault",
+  "license": "ISC"
+}
