@@ -1,16 +1,16 @@
 {
-  "name": "mongo-trip-data",
-  "version": "1.0.0",
-  "description": "A node, express, and handlebars application reading and writing trip data from a Mongo NoSQL database",
-  "main": "index.js",
-  "type": "module",
-  "dependencies": {
-    "express": "^4.17.1",
-    "handlebars": "^4.7.7"
-  },
+  "name": "mongotripdata",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "author": "Jacob Archambault",
-  "license": "ISC"
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "hbs": "^4.1.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  }
 }
