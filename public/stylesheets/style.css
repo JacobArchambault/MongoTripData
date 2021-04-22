@@ -1,8 +1,10 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.order-section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 1em;
+  width: max-content;
 }
 
-a {
-  color: #00B7FF;
+input, label {
+  margin: auto auto 1em 0;
 }
