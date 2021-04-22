@@ -5,6 +5,7 @@
   width: max-content;
 }
 
-input, label {
+input, label, select {
   margin: auto auto 1em 0;
+  flex: 50%;
 }
