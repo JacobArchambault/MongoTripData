@@ -8,6 +8,6 @@ var tripSchema = new mongoose.Schema({
 	gallons: { type: Number, required: true }
 });
 
-tripSchema.virtual('miles-per-gallon').get(() => this.miles / this.gallons);
+tripSchema.virtual('miles-per-gallon').get(function () { return this.miles / this.gallons });
 
 module.exports = mongoose.model('Trip', tripSchema);
