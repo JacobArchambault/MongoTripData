@@ -15,13 +15,8 @@ router.post('/', function (req, res) {
     gallons: req.body.gallons
   });
 
-  newItem.save(function (err) {
-    if (err) {
-      res.status(500).send(err);
-    }
-    else {
-      res.send("Car successfully added.");
-    }
+  newItem.save(function () {
+    res.redirect("/");
   });
 });
 
