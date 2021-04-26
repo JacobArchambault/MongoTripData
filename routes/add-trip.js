@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-var Trip = require('../models/trips');
+const Trip = require('../models/trips');
 
 
 router.get('/', function (req, res, next) {
