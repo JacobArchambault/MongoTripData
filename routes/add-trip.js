@@ -13,9 +13,7 @@ router.post('/', function (req, res) {
     city: req.body.city,
     miles: req.body.miles,
     gallons: req.body.gallons
-  }).save(function () {
-    res.redirect("/");
-  });
+  }).save(() => res.redirect("/"));
 });
 
 module.exports = router;
