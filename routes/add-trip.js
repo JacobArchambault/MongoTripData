@@ -8,14 +8,12 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/', function (req, res) {
-  var newItem = new Trip({
+  new Trip({
     date: req.body.date,
     city: req.body.city,
     miles: req.body.miles,
     gallons: req.body.gallons
-  });
-
-  newItem.save(function () {
+  }).save(function () {
     res.redirect("/");
   });
 });
