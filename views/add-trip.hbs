@@ -1,16 +1,16 @@
 <form class="order-section" method="POST">
 
-    <label for="trip-date">Trip date: </label>
-    <input type="date" name="trip-date" placeholder="Enter trip date">
+    <label for="date">Trip date: </label>
+    <input type="date" name="date" placeholder="Enter trip date">
     <label for="city">City</label>
-    <select name="city">
-        <option value="chicago">Chicago</option>
-        <option value="indianapolis">Indianapolis</option>
-        <option value="cincinnati">Cincinnati</option>
-        <option value="nashville">Nashville</option>
+    <select name="city" type="text">
+        <option value="Chicago">Chicago</option>
+        <option value="Indianapolis">Indianapolis</option>
+        <option value="Cincinnati">Cincinnati</option>
+        <option value="Nashville">Nashville</option>
     </select>
-    <label>Miles traveled</label><input type="number">
-    <label>Gallons</label><input type="number">
+    <label for="miles">Miles traveled</label><input type="number" name="miles">
+    <label for"gallons">Gallons</label><input type="number" name="gallons">
     <button type="submit" class="btn btn-success">Submit</button>
 
 </form>
