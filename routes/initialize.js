@@ -11,12 +11,12 @@ router.get('/', function (req, res) {
         { "date": "2021-10-04", "city": "Nashville", "miles": 350, "gallons": 100 },
         { "date": "2020-11-02", "city": "Cincinnati", "miles": 400, "gallons": 125 },
         { "date": "2020-09-03", "city": "Indianapolis", "miles": 95, "gallons": 10 },
-    ], function (err, docs) {
+    ], (err, docs) => {
         if (err) {
             res.send('Error: ' + err);
         }
         else {
-            Trips.count({}, function (err, count) {
+            Trips.count({}, (err, count) => {
                 console.log('-');
                 console.log("Trips added :", count);
                 res.send('success');
