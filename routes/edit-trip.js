@@ -3,17 +3,14 @@ const router = express.Router();
 const Trip = require('../models/trips');
 
 
-router.get('/', function (req, res, next) {
-  res.render('edit-trip');
-});
+router.get('/', (req, res, next) => Trip.findOne({city: 'Chicago'}, (err, trip) => res.render('edit-trip', { trips: trip })));
 
-router.post('/', function (req, res) {
+router.post('/', (req, res) =>
   new Trip({
     date: req.body.date,
     city: req.body.city,
     miles: req.body.miles,
     gallons: req.body.gallons
-  }).save(() => res.redirect("/"));
-});
+  }).save(() => res.redirect("/")));
 
 module.exports = router;
