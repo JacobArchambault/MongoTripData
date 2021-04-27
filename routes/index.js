@@ -3,8 +3,5 @@ var router = express.Router();
 var Trip = require('../models/trips');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    Trip.find(function(err, trip) {
-      res.render('index', { trips: trip });  });
-});
+router.get('/', (req, res, next) => Trip.find((err, trip) => res.render('index', { trips: trip })));
 module.exports = router;
