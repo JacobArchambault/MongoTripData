@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const Trip = require('../models/trips');
+const hbs = require('hbs');
+hbs.registerHelper('select', function(selected, option) {
+  return (selected == option) ? 'selected="selected"' : '';
+});
 
 
 router.get('/', (req, res, next) => Trip.findOne({_id: req.query._id}, (err, trip) => res.render('edit-trip', { trips: trip })));
