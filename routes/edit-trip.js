@@ -3,7 +3,7 @@ const router = express.Router();
 const Trip = require('../models/trips');
 
 
-router.get('/', (req, res, next) => Trip.findOne({city: 'Chicago'}, (err, trip) => res.render('edit-trip', { trips: trip })));
+router.get('/', (req, res, next) => Trip.findOne({_id: req.query._id}, (err, trip) => res.render('edit-trip', { trips: trip })));
 
 router.post('/', (req, res) =>
   new Trip({
