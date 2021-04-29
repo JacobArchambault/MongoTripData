@@ -1,7 +1,7 @@
 <form class="order-section" method="POST">
 
-    <label for="date">Trip date: </label>
-    <p name="date">{{trips.date}}</p>
+    <label>Trip date: </label>
+    <p name="date" id="date">{{trips.date}}</p>
     <label for="city">City</label>
     <select name="city" type="text" required>
         <option value="Chicago" {{{select trips.city 'Chicago'}}}>Chicago</option>

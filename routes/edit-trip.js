@@ -11,10 +11,11 @@ router.get('/', (req, res, next) => Trip.findOne({ _id: req.query._id }, (err, t
 
 router.post('/', function (req, res) {
   Trip.findOneAndUpdate({
-    'city': 'Chicago'
+    _id : req.query._id
   },
     {
       $set: {
+        city: 'Nashville',
         miles: 1000,
         gallons: 2
       }
