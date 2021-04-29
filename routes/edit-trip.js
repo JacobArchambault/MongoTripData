@@ -15,9 +15,9 @@ router.post('/', function (req, res) {
   },
     {
       $set: {
-        city: 'Nashville',
-        miles: 1000,
-        gallons: 2
+        city: req.body.city,
+        miles: req.body.miles,
+        gallons: req.body.gallons
       }
     }, { upsert: false }, function (err, doc) { res.redirect("/"); })
 });
