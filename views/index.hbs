@@ -32,8 +32,8 @@
     </tbody>
 </table>
 <script>
+    const rows = document.getElementById('table-body').children;
     function filterByCity() {
-        const rows = document.getElementById('table-body').children;
         const selectedCity = document.getElementById('city-filter').value;
         for (let row of rows) {
             row.style.display = row.textContent.includes(selectedCity) ? "" : "none";
