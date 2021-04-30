@@ -9,9 +9,9 @@ hbs.registerHelper('select', function (selected, option) {
 
 router.get('/', (req, res, next) => Trip.findOne({ _id: req.query._id }, (err, trip) => res.render('edit-trip', { trips: trip })));
 
-router.post('/', function (req, res) {
+router.post('/', (req, res) =>
   Trip.findOneAndUpdate({
-    _id : req.query._id
+    _id: req.query._id
   },
     {
       $set: {
@@ -19,7 +19,6 @@ router.post('/', function (req, res) {
         miles: req.body.miles,
         gallons: req.body.gallons
       }
-    }, { upsert: false }, function (err, doc) { res.redirect("/"); })
-});
+    }, { upsert: false }, (err, doc) => res.redirect("/")));
 
 module.exports = router;
