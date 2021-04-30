@@ -1,6 +1,6 @@
 <h1>Trip log</h1>
 <label for="city">Filter by city: </label>
-<select name="city" type="text" onchange=foo()>
+<select id="city-filter" type="text" onchange=filterByCity()>
     <option value="all">All</option>
     <option value="Chicago">Chicago</option>
     <option value="Indianapolis">Indianapolis</option>
@@ -32,7 +32,7 @@
     </tbody>
 </table>
 <script>
-    function foo(){
-        console.log("hello!");
+    function filterByCity() {
+        console.log("You picked " + document.getElementById('city-filter').value);
     }
 </script>
