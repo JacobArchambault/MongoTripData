@@ -1,7 +1,7 @@
 <h1>Trip log</h1>
 <label for="city">Filter by city: </label>
 <select id="city-filter" type="text" onchange=filterByCity()>
-    <option value="all">All</option>
+    <option value="">All</option>
     <option value="Chicago">Chicago</option>
     <option value="Indianapolis">Indianapolis</option>
     <option value="Cincinnati">Cincinnati</option>
@@ -17,7 +17,7 @@
         <th>edit</th>
         <th>delete</th>
     </thead>
-    <tbody>
+    <tbody id="table-body">
         {{#each trips}}
         <tr>
             <td>{{date}}</td>
@@ -33,6 +33,10 @@
 </table>
 <script>
     function filterByCity() {
-        console.log("You picked " + document.getElementById('city-filter').value);
+        const rows = document.getElementById('table-body').children;
+        const selectedCity = document.getElementById('city-filter').value;
+        for (let row of rows) {
+            row.style.display = row.textContent.includes(selectedCity) ? "" : "none";
+        }
     }
 </script>
