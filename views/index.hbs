@@ -1,6 +1,6 @@
 <h1>Trip log</h1>
 <label for="city">Filter by city: </label>
-<select name="city" type="text" onchange=console.log('Hello')>
+<select name="city" type="text" onchange=foo()>
     <option value="all">All</option>
     <option value="Chicago">Chicago</option>
     <option value="Indianapolis">Indianapolis</option>
@@ -31,3 +31,8 @@
         {{/each}}
     </tbody>
 </table>
+<script>
+    function foo(){
+        console.log("hello!");
+    }
+</script>
